@@ -9,10 +9,9 @@ The rightmost element is always a leader.
 class Solution:
 
     def leaders(self, A, N):
-        st = []
+        st = [1,4,6,78,3]
 
         for i in A:
-
             while st and i > st[-1]:
                 print(st, i, st[-1])
                 st.pop()
@@ -22,27 +21,27 @@ class Solution:
         return st
 
 
-class Solution:
-    def leaders(self, arr, N):
-        lst = []
-        j = 1
-        for i in range(N):
-            el = arr[i]
-            j = i + 1
-            is_leader = True
-            while j < N:
+# class Solution:
+#     def leaders(self, arr, N):
+#         lst = []
+#         j = 1
+#         for i in range(N):
+#             el = arr[i]
+#             j = i + 1
+#             is_leader = True
+#             while j < N:
         
-                if el < arr[j]:
-                    j+=1
-                    is_leader = False
-                    continue
+#                 if el < arr[j]:
+#                     j+=1
+#                     is_leader = False
+#                     continue
                 
-                j += 1
+#                 j += 1
 
-            if is_leader:
-                lst.append(el)
+#             if is_leader:
+#                 lst.append(el)
             
-        return lst
+#         return lst
 
 
 cls = Solution()
